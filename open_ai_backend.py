@@ -1,10 +1,19 @@
 # open_ai_backend.py
 
 from openai import OpenAI
+import os
+from dotenv import load_dotenv
+from pathlib import Path
+
+dotenv_path = Path('./.env')
+load_dotenv(dotenv_path=dotenv_path)
 
 # OpenAI Function
 def call_openai(some_random_text):
-    client = OpenAI(api_key="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")
+    apiKey = os.getenv("OPEN_AI_API_KEY")
+    print(apiKey)
+
+    client = OpenAI(api_key=apiKey)
     
     response = client.chat.completions.create(
       model="gpt-4o",
