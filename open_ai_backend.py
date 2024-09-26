@@ -4,7 +4,7 @@ from openai import OpenAI
 
 # OpenAI Function
 def call_openai(some_random_text):
-    client = OpenAI(api_key="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")
+    client = OpenAI(api_key="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")
     
     response = client.chat.completions.create(
       model="gpt-4o",

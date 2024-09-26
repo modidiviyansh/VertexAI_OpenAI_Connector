@@ -1,3 +1,4 @@
+// Global sessionId variable to store the session ID
 let sessionId = "";
 
 // Function to append messages to the chat window
